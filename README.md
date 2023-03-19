@@ -1,4 +1,4 @@
-# rick-and-morty custom project
+# App rick-and-morty project
 
 ### This project is based on [Rick-and-Morty REST API](https://rickandmortyapi.com/) and this amazing [figma layout](https://www.figma.com/file/cYJvmWGM32sJHU6anepUEj/Rick-and-Morty-(web-responsive)-(Community)?node-id=106-624&t=DI3UQNwKEn7rGnec-0) 
 
