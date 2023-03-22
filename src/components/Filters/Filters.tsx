@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { filtersInput } from "../../atoms/atoms_state";
 import { QueryParams } from "../../typings";
+import { StyledFiltersContainer, StyledInput } from "./Filters.styled";
 
 const initialState = {
   name: "",
@@ -43,8 +44,8 @@ const Filters = () => {
   };
   console.log(inputValue);
   return (
-    <div>
-      <div>
+    <StyledFiltersContainer>
+      <StyledInput>
         <input
           type="text"
           name="name"
@@ -56,9 +57,11 @@ const Filters = () => {
             if (e.key === "Enter") handleFilters();
           }}
         />
-        <button onClick={handleFilters}>pesquisar</button>
-      </div>
-      <div>
+        <button onClick={handleFilters}>
+          <img src="assets/images/Leading Icon.svg" alt="search-icon" />
+        </button>
+      </StyledInput>
+      <StyledInput>
         <select name="specie" value={inputValue.specie} onChange={handleChange}>
           <option value="" disabled>
             Species
@@ -69,8 +72,8 @@ const Filters = () => {
             </option>
           ))}
         </select>
-      </div>
-      <div>
+      </StyledInput>
+      <StyledInput>
         <select name="gender" value={inputValue.gender} onChange={handleChange}>
           <option value="" disabled>
             Gender
@@ -81,8 +84,8 @@ const Filters = () => {
             </option>
           ))}
         </select>
-      </div>
-      <div>
+      </StyledInput>
+      <StyledInput>
         <select name="status" value={inputValue.status} onChange={handleChange}>
           <option value="" disabled>
             Status
@@ -93,8 +96,8 @@ const Filters = () => {
             </option>
           ))}
         </select>
-      </div>
-    </div>
+      </StyledInput>
+    </StyledFiltersContainer>
   );
 };
 

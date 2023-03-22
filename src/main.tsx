@@ -5,6 +5,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  redirect,
 } from "react-router-dom";
 
 import {
@@ -14,14 +15,17 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
-import Home from "./pages/Home";
-import NotFound from "./components/NotFound";
-import "./index.css";
-import Loading from "./components/Loading";
+import Home from "./pages/Home/Home";
+import NotFound from "./components/usefulComponents/NotFound";
+import Loading from "./components/usefulComponents/Loading";
+import { GlobalStyle } from "./globalStyle/GlobalStyle.styles";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Home />} errorElement={<NotFound />} />
+    <>
+      <Route path="/" element={<Home />} errorElement={<NotFound />} />
+      <Route path="*" element={<Home />} />
+    </>
   )
 );
 
@@ -29,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <RecoilRoot>
       <Suspense fallback={<Loading />}>
+        <GlobalStyle />
         <RouterProvider router={router} />
       </Suspense>
     </RecoilRoot>
