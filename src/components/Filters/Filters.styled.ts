@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledFiltersContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 16px;
+  margin: 24px 0 58px;
 `;
 
 export const StyledInput = styled.div`
