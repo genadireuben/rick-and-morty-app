@@ -4,7 +4,7 @@
 
 #### The project was created using yarn with vite react-typescript template
 
-##### The technologies used were React.js, Typescript, Recoil.js and styled componets.
+##### The technologies used to build this amazing Rick and Morty app were React.js, Typescript, Recoil.js and Styled components.
 
 The app is still in development but is already deployed on Netlify under the domain https://deploy-preview-2--rick-and-morty-custom-project.netlify.app/
 
